@@ -9,51 +9,71 @@
 </head>
 <body>
     <nav>
+        <!-- Hamburger menu for small screens -->
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <div class="logo">DamnIt Clothing</div>
-        <ul>
+        <ul id="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+
     <header id="home">
         <h1>Welcome to</h1>
         <img src="logo.png" alt="DamnIt Clothing Logo" class="logo-img">
         <p>Trendy fashion and footwear for everyone</p>
         <button class="cta-button">Shop Now</button>
     </header>
-    <br>
+
     <div class="container">
         <div class="section" id="about">
             <h2>About Us</h2>
             <p>DamnIt Clothing is all about bold fashion choices. We bring you stylish and comfortable apparel and footwear.</p>
         </div>
-        <div class="section" id="services">
-            <h2>Our Services</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Custom Apparel</h3>
-                    <p>Get personalized clothing designs tailored to your style.</p>
-                </div>
-                <div class="card">
-                    <h3>Footwear Collection</h3>
-                    <p>Shop our wide range of trendy shoes for all occasions.</p>
-                </div>
-                <div class="card">
-                    <h3>Fast Shipping</h3>
-                    <p>We ensure quick delivery to your doorstep.</p>
-                </div>
+    </div>
+
+    <div class="section" id="services">
+        <h2>Our Services</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Custom Apparel</h3>
+                <p>Get personalized clothing designs tailored to your style.</p>
+            </div>
+            <div class="card">
+                <h3>Footwear Collection</h3>    
+                <p>Shop our wide range of trendy shoes for all occasions.</p>
+            </div>
+            <div class="card">
+                <h3>Fast Shipping</h3>
+                <p>We ensure quick delivery to your doorstep.</p>
             </div>
         </div>
-        <div class="section" id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: support@damnitclothing.com</p>
-            <p>Phone: (123) 456-7890</p>
-        </div>
     </div>
+
+    <div class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@damnitclothing.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </div>
+
     <footer>
         <p>&copy; 2025 DamnIt Clothing. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // Toggle navigation menu for mobile view
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
+    </script>
 </body>
 </html>
